@@ -27,3 +27,13 @@ For now the leader and the nodes are statically allocated (we must specify from 
 For now the server has only one task which is data logging, so basically its only duty is to monitor all the messages being sent or recieved to/from other agents 
 by listening to the same address/pipeline that all other agents use for communication. 
 Data logging is impotant for online data visualization and in order to keep track of messages to detect if any data is lost during the whole transmission process. 
+
+## Organization
+
+The Final code can be found here: [/Final trials/Final code many-transmissions/Documented code](/Final%20trials/Final%20code%20many-transmissions/Documented%20code) as follows:
+1. **Leadernode.ino**: which is the file containing the code for the leader node (node 1)
+2. **Node2.ino**: which is the file containing the code for node 2
+3. **Node3.ino**: which is the file containing the code for node 3 
+4. **Server.ino**:  which is the file containing the code for the Server
+
+This can be tested using these [files](Final%20trials/Final%20code%20many-transmissions%20(code%20for%20testing)). Also you can find some results for the testing code [here](Final%20trials/Results%20many-transmission%20(final).xlsx). Other files in the [Final trials](Final%20trials) folder include previous trials (before reaching the final result) , results of these prevouis trials and testing other components.
