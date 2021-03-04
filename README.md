@@ -1,6 +1,19 @@
 # Overview
 This Project involves the communication between four nrf24 modules, where three are installed on three Arduinos of type Mega (**agents**) while one is 
-connected to Arduino Uno (**server**).  
+connected to Arduino Uno (**server**).
+
+## Connection
+The Hardware connection in this project is established according to this table:
+
+|   Nrf24 pin   | Arduino Mega  |  Arduino Uno  |
+|:-------------:|:-------------:|:-------------:|
+|     VCC       |     3.3V      |     3.3V      |
+|     GND       |     GND       |     GND       |
+|     CSN       |     32        |     10        |
+|     CE        |     7         |     7         |
+|     SCK       |     52        |     13        |
+|     MOSI      |     51        |     11        |
+|     MISO      |     50        |     12        |
 
 ## About the Communication
 ### Agents:
@@ -43,3 +56,6 @@ The final code can be tested using these [files](Final%20trials/Final%20code%20m
 ## Sequence of Operation
 
 In order to run the program, [Node2.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node2) , [Node3.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node3) & [Server.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Server) should run first so that nodes 2 & 3 and the Server prepare themselves for listening before the leader broadcast any message. After that run the [Leadernode.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Leadernode) file to start the whole data transmission scheme disscussed above. In order to, monitor the messages being sent or recieved during transmission, the Serial plotter in the Server.ino file is used.
+
+
+
