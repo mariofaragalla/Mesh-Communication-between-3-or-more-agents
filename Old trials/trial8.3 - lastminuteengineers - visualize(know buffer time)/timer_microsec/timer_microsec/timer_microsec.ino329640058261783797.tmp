@@ -1,0 +1,50 @@
+uint32_t micro_sec = 0;
+uint32_t time1 = 0;
+
+void setup() {
+  Serial.begin(115200);
+  timer();
+}
+
+void loop() {
+  if(micro_sec >= 250000){
+    Serial.println(micro_sec);
+    micro_sec = 0;
+  }
+}
+
+void timer(){
+  cli();
+  TCCR5A = 0;     // set entire TCCR5A register to 0
+  TCCR5B = 0;     // same for TCCR5B
+  TCNT5 = 0;
+
+  OCR5A = 15;            // compare match register (16MHz/(8 prescaler * 1000000(interrupt frequency))- 1) // 1 microsec = 1000000 Hz // https://timer-interrupt-calculator.simsso.de/
+
+  TCCR5B |= (1 << WGM52);   // CTC mode
+
+  TCCR5B |= (1 << CS50);
+  TCCR5B &= ~(1 << CS51);    // clkI/O /1 prescaler 
+  TCCR5B &= ~(1 << CS52);
+  
+  TIMSK5 |= (1 << OCIE5A);
+  
+/*
+  // using 8 prescaling (some errors: works with 4 microseconds instead of 1 microsecond)
+  OCR5A = 1;            // compare match register (16MHz/(8 prescaler * 1000000(interrupt frequency))- 1) // 1 microsec = 1000000 Hz // https://timer-interrupt-calculator.simsso.de/
+
+  TCCR5B |= (1 << WGM52);   // CTC mode
+
+  TCCR5B &= ~(1 << CS50);
+  TCCR5B |= (1 << CS51);    // clkI/O /8 prescaler 
+  TCCR5B &= ~(1 << CS52);
+  
+  TIMSK5 |= (1 << OCIE5A);  // enable timer compare interrupt
+*/
+  sei();             // enable all interrupts
+  micro_sec = 0;
+}
+
+ ISR(TIMER5_COMPA_vect){          // timer compare interrupt service routine
+   micro_sec++;  // one increment = 1 microsec
+}

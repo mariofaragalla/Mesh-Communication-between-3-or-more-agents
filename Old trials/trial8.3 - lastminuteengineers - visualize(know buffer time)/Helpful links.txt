@@ -1,0 +1,98 @@
+#Important links:
+
+##Sniffing (Promiscuous mode):
+http://yveaux.blogspot.com/2014/07/nrf24l01-sniffer-part-1.html (sniffing method)
+https://www.blackhillsinfosec.com/promiscuous-wireless-packet-sniffer-project/ (Further explaination)
+https://hackaday.com/2014/08/05/sniffing-nrf24l01-traffic-with-wireshark/ (1.fix sniffing problems)
+https://hackaday.com/2011/02/07/sniffing-rf-hardware-communication-packets/ (2.fix sniffing problems)
+
+##IRQ:
+https://www.instructables.com/How-to-Use-the-NRF24L01s-IRQ-Pin-to-Generate-an-In/
+https://myplayground123.wordpress.com/2017/05/19/nrf24l01-with-interrupt-on-receiver/ (IRQ)
+https://www.mikrocontroller.net/articles/NRF24L01_Tutorial (How to handle IRQ)
+http://arduinoinfo.mywikis.net/wiki/Nrf24L01-2.4GHz-HowTo (IRQw ith Arduino mega)
+https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/ (Interrupts with Arduino)
+https://forum.sparkfun.com/viewtopic.php?t=33807 (some explaination)
+https://www.siue.edu/~tyork/classes/ece381/lectures/SPI_NRF24_Radio_Lecture.pdf
+https://devzone.nordicsemi.com/f/nordic-q-a/39427/how-to-reset-nrf24l01 (reset IRQ)
+https://groups.google.com/g/radiohead-arduino/c/Nwx2LtWydFU/m/JRPYJGW3BgAJ (disable IRQ)
+
+##Using nrf24 mesh
+
+https://surasto.de/index.php?cat=Elektronik&page=Arduino-IoT
+https://digistump.com/wiki/digispark/tutorials/nrfmesh
+https://forum.mysensors.org/topic/3572/arduino-and-nrf24-mesh-code/6
+https://github.com/nRF24/RF24Mesh/pull/7/files (dynamic NodeID configuration)
+https://lemariva.com/blog/2017/01/projectdiva-update-1 (Sensor mesh based on nrf24l01+ connected to Android Things)
+https://www.instructables.com/NRF24L01-Multiceiver-Network/
+https://www.diva-portal.org/smash/get/diva2:1222330/FULLTEXT01.pdf (very important)
+http://archive.fabacademy.org/2016/fablabsantiago/students/374/assignment_13.html
+https://fritzing.org/projects/arduino-pro-mini-and-nrf24l01-prototype
+https://hackaday.io/project/11639-rf-mesh-network
+https://www.eevblog.com/forum/microcontrollers/arduino-based-nrf24l01-mesh-node-triangulation-(or-alternatives)/
+https://www.dobitaobyte.com.br/rede-mesh-com-arduino-e-raspberry-usando-nrf24l01/#RF24Mesh
+https://www.diva-portal.org/smash/get/diva2:882062/FULLTEXT01.pdf
+
+
+## Using Radiohead mesh
+
+https://groups.google.com/g/radiohead-arduino/c/FmKLbuYEv0o/m/z6hI2hf5BQAJ
+https://groups.google.com/g/radiohead-arduino/c/vlw76uDSeaM/m/9iZ7b3jntYsJ
+https://groups.google.com/g/radiohead-arduino/c/_ykxX4ZAILc/m/GdMRbNGTaVkJ
+https://groups.google.com/g/radiohead-arduino/c/2zGJt0goNu4/m/m-muUGx_ngMJ
+https://groups.google.com/g/radiohead-arduino/c/x7jJCIXrZnw/m/lPif-sn9PxAJ
+https://groups.google.com/g/radiohead-arduino/c/xEGzWi_Gsiw/m/OE6DY-vnMwMJ
+
+#Issues:
+
+https://forum.arduino.cc/index.php?topic=586434.0 (To solve full buffer problem)
+https://github.com/nRF24/RF24/issues/429 (Transmission stops after X seconds/transmissions)
+https://arduino.stackexchange.com/questions/54528/arduino-and-rf24-library-communication-stops-after-short-amount-of-time (communication-stops-after-short-amount-of-time)
+https://forum.arduino.cc/index.php?topic=246791.0 (with nRF24 module interrupt functionality)
+https://github.com/nRF24/RF24/issues/235 (available() always returns true )
+https://github.com/nRF24/RF24/issues/394 (Probably not issue, but yes a problem with read.available . ¿ Pipe number 7 ?)
+https://devzone.nordicsemi.com/f/nordic-q-a/2934/nrf24l01-timing-diagram (measure time between CE and IRQ)
+https://devzone.nordicsemi.com/f/nordic-q-a/51517/how-to-check-if-nrf24l01-nrf24-is-working-correctly-in-real-time (how to check if nrf24l01 nrf24 is working correctly in real time)
+https://devzone.nordicsemi.com/f/nordic-q-a/34656/time-urgent-nrf24l01-not-clearing-fifo-buffers-during-read-write ([TIME URGENT] nRF24L01 not clearing FIFO buffers during read/write)
+https://arduino.stackexchange.com/questions/12101/multiple-nodes-with-the-same-receiving-and-transmitting-address (Multiple nodes with the same receiving and transmitting address)
+https://www.avrfreaks.net/forum/nrf24l01-does-not-transmit (nRF24L01+ does not transmit..)
+https://devzone.nordicsemi.com/f/nordic-q-a/38437/nrf24l01-tx-and-rx-timing-issue (NRF24L01+ TX and RX Timing Issue with stm)
+https://devzone.nordicsemi.com/f/nordic-q-a/50926/measure-nrf24l01-rssi (Measure nrf24l01+ RSSI)
+https://arduino.stackexchange.com/questions/5058/nrf24l01-direct-communication-library-logics (issue with nrf24network)
+
+#Datasheets:
+
+http://www.diyembedded.com/tutorials/nrf24l01_0/nrf24l01_tutorial_0.pdf ( Everything You Need to Know about
+the nRF24L01)
+https://www.playembedded.org/blog/a-radio-frequency-transceiver-library-nrf24l01-and-chibiosrt/ (simplified datasheet)
+https://www.arduino.cc/en/Hacking/PinMapping2560(arduino mega datasheet)
+http://smartep.ru/datasheets/rf/nRF24L01_Tutorial_3.pdf (pipe understanding)
+https://www.insidegadgets.com/2012/08/22/using-the-nrf24l01-wireless-module/ (some explaination)
+https://components101.com/wireless/nrf24l01-pinout-features-datasheet (some explaination)
+https://www.rhydolabz.com/wiki/?p=15956 (some explaination for nrf24)
+https://www.informatik.uni-kiel.de/~mh/lehre/abschlussarbeiten/bsc/Krause.pdf
+
+#Some projects:
+http://diginfo.ru/en/alpine-ski/timing-system-for-alpine-ski-based-on-arduino-radio-channel-on-modules-nrf24l01/ (Timing system for Alpine skiing based on Arduino. Radio channel on modules nRF24L01+)
+
+#Libraries:
+
+http://www.airspayce.com/mikem/arduino/RadioHead/
+http://www.airspayce.com/mikem/arduino/RadioHead/classRH__NRF24.html
+http://www.airspayce.com/mikem/arduino/RadioHead/classRHMesh.html
+https://playground.boxtec.ch/doku.php/wireless/nrf24#libraries_fuer_mesh-_netzwerke
+https://tmrh20.github.io/RF24/Transfer_8ino-example.html (Optimized high speed nRF24L01+ driver class documentation)
+https://readthedocs.org/projects/circuitpython-nrf24l01/downloads/pdf/latest/ (nRF24L01 library documentation)
+https://readthedocs.org/projects/circuitpython-nrf24l01/downloads/pdf/stable/
+https://os.mbed.com/teams/BME-SmartLab/code/RF24/file/9a4127130006/RF24.h/ (nRF24L01 library documentation)
+https://tmrh20.blogspot.com/2014/03/high-speed-data-transfers-and-wireless.html (A New Optimized Fork of the RF24 Radio Library)
+https://www.ccsinfo.com/forum/viewtopic.php?t=47351(nRF24L01+ full driver by Eduardo Guilherme Brandt)
+https://www.riot-os.org/api/group__drivers__nrf24l01p.html (NRF24L01+ driver interface)
+https://github.com/bjarne-hansen/nrf24-time-client/blob/master/nrf24-time-client.ino (nr24 with rtc module)
+
+#Extras:
+https://de.switch-case.com/51341333
+https://developer.aliyun.com/mirror/npm/package/nrf24 
+https://flows.nodered.org/node/node-red-contrib-nrf24
+https://schullebernd.de/master-slave-netzwerk-mit-nrf24l01-und-arduino-esp8266/ (Master/Slave Netzwerk mit nRF24L01 und Arduino/ESP8266)
+https://fritzing-data.s3.eu-central-1.amazonaws.com/4b39382b30979fff8ecdf9a8b6815f8f.ino?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2HCNQME5J5JNR5LX%2F20201023%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20201023T151713Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=eec6e54781eef10b9d053a6fe029be739aa73e512d050d35d5d79084f6cb3ea0

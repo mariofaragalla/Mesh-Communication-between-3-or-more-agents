@@ -1,0 +1,96 @@
+https://lastminuteengineers.com/nrf24l01-arduino-wireless-communication/
+
+Hardware Overview:
+
+Radio Frequency
+- The nRF24L01+ transceiver module is designed to operate in 2.4 GHz worldwide ISM 
+  frequency band and uses GFSK modulation for data transmission. 
+- The data transfer rate can be one of 250kbps, 1Mbps and 2Mbps.
+
+Power consumption
+
+- The operating voltage of the module is from 1.9 to 3.6V, but the good news is that the 
+  logic pins are 5-volt tolerant, so we can easily connect it to an Arduino or any 
+  5V logic microcontroller without using any logic level converter.
+
+- The module supports programmable output power viz. 0 dBm, -6 dBm, -12 dBm or -18 dBm 
+  and consumes unbelievably around 12 mA during transmission at 0 dBm, which is even 
+  lower than a single LED. And best of all, it consumes 26 µA in standby mode and 900 nA 
+  at power down mode. That’s why they’re the go-to wireless device for low-power applications.
+
+SPI Interface
+
+- The nRF24L01+ transceiver module communicates over a 4-pin Serial Peripheral Interface (SPI) 
+  with a maximum data rate of 10Mbps. All the parameters such as frequency channel 
+  (125 selectable channels), output power (0 dBm, -6 dBm, -12 dBm or -18 dBm), and 
+  data rate (250kbps, 1Mbps, or 2Mbps) can be configured through SPI interface.
+
+- The SPI bus uses a concept of a Master and Slave, in most common applications our Arduino 
+  is the Master and the nRF24L01+ transceiver module is the Slave. Unlike the I2C 
+  bus the number of slaves on the SPI bus is limited, on the Arduino Uno you can use a 
+  maximum of two SPI slaves i.e. two nRF24L01+ transceiver modules.
+
+What is PA LNA?
+
+- The PA stands for Power Amplifier. It merely boosts the power of the signal being transmitted 
+  from the nRF24L01+ chip. Whereas, LNA stands for Low-Noise Amplifier. 
+  The function of the LNA is to take the extremely weak and uncertain signal from the antenna 
+  (usually on the order of microvolts or under -100 dBm) and amplify it to a more useful level 
+  (usually about 0.5 to 1V).
+
+- The low-noise amplifier (LNA) of the receive path and the power amplifier (PA) of the 
+  transmit path connect to the antenna via a duplexer, which separates the two signals and 
+  prevents the relatively powerful PA output from overloading the sensitive LNA input.
+
+How nRF24L01+ transceiver module works?
+
+RF Channel Frequency
+
+- The nRF24L01+ transceiver module transmits and receives data on a certain frequency 
+  called Channel. Also in order for two or more transceiver modules to communicate with 
+  each other, they need to be on the same channel.(This channel could be any frequency in 
+  the 2.4 GHz ISM band or to be more precise, it could be between 2.400 to 2.525 GHz 
+  (2400 to 2525 MHz)).
+
+- Each channel occupies a bandwidth of less than 1MHz. This gives us 125 possible channels
+  with 1MHz spacing. So, the module can use 125 different channels which give a possibility 
+  to have a network of 125 independently working modems in one place.
+- RF channel frequency of your selected channel is set according to the following formula:
+  Freq(Selected) = 2400 + CH(Selected)
+  For example, if you select 108 as your channel for data transmission, the RF channel 
+  frequency of your channel would be 2508MHz (2400 + 108)
+
+nRF24L01+ Multiceiver Network
+
+- The nRF24L01+ provides a feature called Multiceiver. It’s an abbreviation for Multiple 
+  Transmitters Single Receiver. In which each RF channel is logically divided into 6 parallel 
+  data channels called Data Pipes. (n other words, a data pipe is a logical channel in the 
+  physical RF Channel.) Each data pipe has its own physical address (Data Pipe Address) and 
+  can be configured.
+- To simplify the above diagram, imagine the primary receiver acting as a hub receiver 
+  collecting information from 6 different transmitter nodes simultaneously. 
+  The hub receiver can stop listening any time and acts as a transmitter. But this can 
+  only be done one pipe/node at a time.
+
+Enhanced ShockBurst Protocol
+
+- The nRF24L01+ transceiver module uses a packet structure known as Enhanced ShockBurst. 
+  This simple packet structure is broken down into 5 different fields.
+
+- The original ShockBurst structure consisted only of Preamble, Address, Payload and the 
+  Cyclic Redundancy Check (CRC) fields. 
+
+- Enhanced ShockBurst brought about greater functionality
+  for more enhanced communications using a newly introduced Packet Control Field (PCF).
+  
+- This new structure is great for a number of reasons. Firstly, it allows for variable length 
+  payloads with a payload length specifier, meaning payloads can vary from 1 to 32 bytes.
+
+- Secondly, it provides each sent packet with a packet ID, which allows the receiving device to 
+  determine whether a message is new or whether it has been retransmitted (and thus can be ignored).
+
+- Finally, and most importantly, each message can request an acknowledgement to be sent when it is 
+  received by another device.
+
+RF24 Arduino Library for nRF24L01+ Module
+

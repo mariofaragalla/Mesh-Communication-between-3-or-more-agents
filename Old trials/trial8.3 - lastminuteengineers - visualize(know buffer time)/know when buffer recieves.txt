@@ -1,0 +1,86 @@
+Important links:
+*Sniffing (Promiscuous mode):
+http://yveaux.blogspot.com/2014/07/nrf24l01-sniffer-part-1.html (sniffing method)
+https://www.blackhillsinfosec.com/promiscuous-wireless-packet-sniffer-project/ (Further explaination)
+https://timdows.com/projects/mysensorsinformation/ (Further explaination)
+https://hackaday.com/2014/08/05/sniffing-nrf24l01-traffic-with-wireshark/ (1.fix sniffing problems)
+https://hackaday.com/2011/02/07/sniffing-rf-hardware-communication-packets/ (2.fix sniffing problems)
+https://stackoverflow.com/questions/38164021/how-to-find-a-pipe-address-using-nrf24l01-2-4ghz-wireless-transceiver (might be helpful)
+https://www.youtube.com/watch?v=WqkmGG0biXc&ab_channel=SamyKamkar (might be helpful)
+-other codes:
+https://devzone.nordicsemi.com/f/nordic-q-a/11762/rf-sniffer-for-nrf24l01-and-nrf24lu1-communication (Snifferdemo.zip)
+https://microcontrollerelectronics.com/using-an-nrf24l01-module-to-scan-the-2-4ghz-frequency-range/
+http://blog.cyberexplorer.me/2014/01/sniffing-and-decoding-nrf24l01-and.html (mth 3aref)
+https://virtualabs.fr/ndh16/ndh16-mass-pwning-bug.pdf (research on sniffing)
+https://www.youtube.com/watch?v=61kWj6zu4Uw&ab_channel=AndreasSpiess (some explaination for Scanner example)
+http://dangerousprototypes.com/blog/tag/nrf24l01/ (some sniffing projects)
+https://os.mbed.com/users/davidr99/code/RadioHead-148/docs/tip/classRH__NRF24.html (radiohead library + promiscuous mode)
+
+Issues:
+https://forum.arduino.cc/index.php?topic=586434.0 (To solve full buffer problem)
+
+https://github.com/nRF24/RF24/issues/235
+https://github.com/nRF24/RF24/issues/394
+
+https://devzone.nordicsemi.com/f/nordic-q-a/2934/nrf24l01-timing-diagram
+https://devzone.nordicsemi.com/f/nordic-q-a/51517/how-to-check-if-nrf24l01-nrf24-is-working-correctly-in-real-time
+https://devzone.nordicsemi.com/f/nordic-q-a/34656/time-urgent-nrf24l01-not-clearing-fifo-buffers-during-read-write
+https://devzone.nordicsemi.com/f/nordic-q-a/50926/measure-nrf24l01-rssi
+https://forum.arduino.cc/index.php?topic=480959.0
+https://tmrh20.github.io/RF24/Transfer_8ino-example.html
+https://forum.arduino.cc/index.php?topic=62222.195
+https://readthedocs.org/projects/circuitpython-nrf24l01/downloads/pdf/latest/ (library documentation)
+https://readthedocs.org/projects/circuitpython-nrf24l01/downloads/pdf/stable/
+https://os.mbed.com/teams/BME-SmartLab/code/RF24/file/9a4127130006/RF24.h/
+https://tmrh20.blogspot.com/2014/03/high-speed-data-transfers-and-wireless.html
+https://www.avrfreaks.net/forum/nrf24l01-does-not-transmit (pontential)
+https://www.ccsinfo.com/forum/viewtopic.php?t=47351 (pontential)
+https://www.sparkfun.com/datasheets/Components/SMD/nRF24L01Pluss_Preliminary_Product_Specification_v1_0.pdf (datasheet - important)
+https://cdn.shopify.com/s/files/1/1509/1638/files/NRF24L01_mit_2_4_GHz_Datenblatt.pdf
+https://www.sparkfun.com/datasheets/Components/nRF24L01_prelim_prod_spec_1_2.pdf
+https://www.playembedded.org/blog/a-radio-frequency-transceiver-library-nrf24l01-and-chibiosrt/
+http://www.diyembedded.com/tutorials/nrf24l01_0/nrf24l01_tutorial_0.pdf
+https://www.instructables.com/How-to-Use-the-NRF24L01s-IRQ-Pin-to-Generate-an-In/ (IRQ)
+https://myplayground123.wordpress.com/2017/05/19/nrf24l01-with-interrupt-on-receiver/ (IRQ)
+https://www.mikrocontroller.net/articles/NRF24L01_Tutorial (How to handle IRQ)
+http://arduinoinfo.mywikis.net/wiki/Nrf24L01-2.4GHz-HowTo (IRQwith Arduino mega)
+https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
+https://www.arduino.cc/en/Hacking/PinMapping2560(arduino mega datasheet)
+https://forum.sparkfun.com/viewtopic.php?t=33807
+https://www.siue.edu/~tyork/classes/ece381/lectures/SPI_NRF24_Radio_Lecture.pdf
+https://devzone.nordicsemi.com/f/nordic-q-a/38437/nrf24l01-tx-and-rx-timing-issue
+https://www.insidegadgets.com/2012/08/22/using-the-nrf24l01-wireless-module/
+https://circuitpython-nrf24l01.readthedocs.io/_/downloads/en/1.1.2/pdf/
+https://components101.com/wireless/nrf24l01-pinout-features-datasheet
+https://www.riot-os.org/api/group__drivers__nrf24l01p.html
+http://diginfo.ru/en/alpine-ski/timing-system-for-alpine-ski-based-on-arduino-radio-channel-on-modules-nrf24l01/
+https://devzone.nordicsemi.com/f/nordic-q-a/39427/how-to-reset-nrf24l01 (reset IRQ)
+https://arduino.stackexchange.com/questions/12101/multiple-nodes-with-the-same-receiving-and-transmitting-address
+http://smartep.ru/datasheets/rf/nRF24L01_Tutorial_3.pdf (pipe understanding)
+
+Libraries:
+
+http://www.airspayce.com/mikem/arduino/RadioHead/
+http://www.airspayce.com/mikem/arduino/RadioHead/classRH__NRF24.html
+http://www.airspayce.com/mikem/arduino/RadioHead/classRHMesh.html
+https://playground.boxtec.ch/doku.php/wireless/nrf24#libraries_fuer_mesh-_netzwerke
+https://digistump.com/wiki/digispark/tutorials/nrfmesh
+https://surasto.de/index.php?cat=Elektronik&page=Arduino-IoT
+https://forum.mysensors.org/topic/3572/arduino-and-nrf24-mesh-code/6
+https://lemariva.com/blog/2017/01/projectdiva-update-1
+https://arduino.stackexchange.com/questions/5058/nrf24l01-direct-communication-library-logics
+https://developer.aliyun.com/mirror/npm/package/nrf24 (might be the one)
+https://flows.nodered.org/node/node-red-contrib-nrf24
+https://github.com/nRF24/RF24Mesh/pull/7/files (dynamic)
+https://schullebernd.de/master-slave-netzwerk-mit-nrf24l01-und-arduino-esp8266/
+https://www.instructables.com/NRF24L01-Multiceiver-Network/
+https://www.diva-portal.org/smash/get/diva2:1222330/FULLTEXT01.pdf (very important)
+http://archive.fabacademy.org/2016/fablabsantiago/students/374/assignment_13.html
+https://www.eevblog.com/forum/microcontrollers/arduino-based-nrf24l01-mesh-node-triangulation-(or-alternatives)/
+https://www.dobitaobyte.com.br/rede-mesh-com-arduino-e-raspberry-usando-nrf24l01/#RF24Mesh
+https://www.informatik.uni-kiel.de/~mh/lehre/abschlussarbeiten/bsc/Krause.pdf
+https://de.switch-case.com/51341333
+https://fritzing.org/projects/arduino-pro-mini-and-nrf24l01-prototype
+https://fritzing-data.s3.eu-central-1.amazonaws.com/4b39382b30979fff8ecdf9a8b6815f8f.ino?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2HCNQME5J5JNR5LX%2F20201023%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20201023T151713Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=eec6e54781eef10b9d053a6fe029be739aa73e512d050d35d5d79084f6cb3ea0
+https://hackaday.io/project/11639-rf-mesh-network
+https://www.diva-portal.org/smash/get/diva2:882062/FULLTEXT01.pdf

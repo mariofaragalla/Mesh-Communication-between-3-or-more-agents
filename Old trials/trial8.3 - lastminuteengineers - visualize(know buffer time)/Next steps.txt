@@ -1,0 +1,6 @@
+Try:
+
+1. to acquire the same address at many time instances using the timer (1 millsec)
+(check how can you leave an address pipe line & how communication is done & read multicever from datasheet)
+2. mesh nrf24 mesh network libraries
+3. Try sniffing (Promiscous mode) with the server.
