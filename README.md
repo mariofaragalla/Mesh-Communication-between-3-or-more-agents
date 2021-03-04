@@ -34,7 +34,7 @@ The Final code can be found here: [/Final trials/Final code many-transmissions/D
 1. **Leadernode.ino**: which is the file containing the code for the leader node (node 1)
 2. **Node2.ino**: which is the file containing the code for node 2
 3. **Node3.ino**: which is the file containing the code for node 3 
-4. **Server.ino**:  which is the file containing the code for the Server
+4. **Server.ino**:  which is the file containing the code for the Server (node 0)
 
 N.B: The library used for this project is the [RF24.h](https://maniacbug.github.io/RF24/classRF24.html).
 
@@ -42,4 +42,4 @@ The final code can be tested using these [files](Final%20trials/Final%20code%20m
 
 ## Sequence of Operation
 
-In order to run the program, the 
+In order to run the program, [Node2.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node2) , [Node3.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node3) & [Server.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Server) should run first so that nodes 2 & 3 and the Server prepare themselves for listening before the leader broadcast any message. After that run the [Leadernode.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Leadernode) file to start the whole data transmission scheme disscussed above. In order to, monitor the messages being sent or recieved during transmission, the Serial plotter in the Server.ino file is used.
