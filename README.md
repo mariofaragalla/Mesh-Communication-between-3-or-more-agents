@@ -36,4 +36,10 @@ The Final code can be found here: [/Final trials/Final code many-transmissions/D
 3. **Node3.ino**: which is the file containing the code for node 3 
 4. **Server.ino**:  which is the file containing the code for the Server
 
-This can be tested using these [files](Final%20trials/Final%20code%20many-transmissions%20(code%20for%20testing)). Also you can find some results for the testing code [here](Final%20trials/Results%20many-transmission%20(final).xlsx). Other files in the [Final trials](Final%20trials) folder include previous trials (before reaching the final result) , results of these prevouis trials and testing other components.
+N.B: The library used for this project is the [RF24.h](https://maniacbug.github.io/RF24/classRF24.html).
+
+The final code can be tested using these [files](Final%20trials/Final%20code%20many-transmissions%20(code%20for%20testing)). Also you can find some results for the testing code [here](Final%20trials/Results%20many-transmission%20(final).xlsx). Other files in the [Final trials](Final%20trials) folder include previous trials (before reaching the final result) , results of these prevouis trials and testing other components.
+
+## Sequence of Operation
+
+In order to run the program, the 
