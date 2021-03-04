@@ -1,0 +1,75 @@
+NRF24:
+- The nRF24L01+ modules can listen on any or all of 6 "pipes".
+- Unfortunately in some RF24 demo programs the variable that is used to hold the address is 
+  given the name "pipe" even though pipes and addresses are quite different.
+- The 6 pipes allow an nRF24 to listen for messages from 6 other devices with 6 different addresses.
+- But those devices may not transmit at the exact same time.
+
+NRF24 mesh communication: 
+
+How does it work?
+- Nodes are assigned a unique number ranging from 1 to 253.
+- Almost, everything else, addressing, routing, etc. is managed by the library.
+- The unique identifier is like an IP address, used to communicate at a high level 
+  within the RF24 communication stack and will generally remain static.
+- At the network layer, the physical radio addresses, similar to MAC addresses, are 
+  allocated as nodes move around and establish connections within the network.
+- The 'master' node keeps track of the unique nodeIDs and the assigned RF24Network addresses.
+- When a node is moved physically, or just loses its connection to the network, it can 
+  automatically re-join the mesh and reconfigure itself within the network.
+- In the mesh configuration sensors/nodes can move around physically, far from the 
+  'master node' using other nodes to route traffic over extended distances.
+-  Addressing and topology is reconfigured as connections are broken and 
+   re-established within different areas of the network.
+- RF24Mesh takes advantage of functionality and features within the RF24 and RF24Network 
+  libraries, so everything from addressing, routing, fragmentation/re-assembly 
+  (very large payloads) are handled automatically with processes designed to support a 
+  multi-node radio network.
+
+
+*About NRF24 mesh communication: (golden links)
+- For NRF24 Mesh library:
+  https://tmrh20.github.io/RF24Mesh/
+  https://tmrh20.github.io/RF24Mesh/Setup-Config.html
+  https://tmrh20.blogspot.com/ (might be useful)
+  https://platformio.org/lib/show/209/RF24Mesh (Tomorrow's trial)
+  https://electropeak.com/learn/wireless-communication-w-arduino-and-nrf24l01/#Create_a_Network_of_NRF_Modules
+  https://www.researchgate.net/publication/319421687_Comparative_Performance_Analysis_between_nRF24L01_and_XBEE_ZB_Module_Based_Wireless_Ad-hoc_Networks
+  https://hackaday.io/project/20388-home-smart-mesh/log/59566-nrf24l01-flood-mesh-protocol
+  https://www.reddit.com/r/arduino/comments/6q43oh/help_creating_mesh_network_from_3x_nodes/
+  https://tmrh20.github.io/RF24Mesh/RF24Mesh_Example_Node2Node_8ino-example.html
+  https://www.instructables.com/id/NRF24L01-Multiceiver-Network/
+  http://maniacalbits.blogspot.com/2013/04/rf24-addressing-nrf24l01-radios-require.html
+  https://developer.nordicsemi.com/nRF_Connect_SDK/doc/0.3.0/nrf/ug_esb.html  
+
+-For my trial:
+  https://www.youtube.com/watch?v=KoJ27BQdYxE
+  https://forcetronic.blogspot.com/2018/09/easy-way-to-create-wireless-sensor.html
+
+-For Simulink approach:
+ https://www.mathworks.com/matlabcentral/fileexchange/59127-rf24-simulink-library-for-arduino-and-raspberry-pi
+
+-Extras:
+ https://community.thingspeak.com/tutorials/matlab/building-a-dynamic-and-self-organizing-network-of-devices/ (might be useful - to be read)
+ https://tmrh20.github.io/RF24Network/Tuning.html (might be useful - to be read)
+ https://www.youtube.com/watch?v=h3OevEdl674
+
+
+*About NRF24: 
+https://forum.arduino.cc/index.php?topic=421081
+https://www.youtube.com/watch?v=D40cgHyBLL4
+
+*About mesh Communication: 
+https://forum.arduino.cc/index.php?topic=323556.0
+
+*To implement millis:
+https://stackoverflow.com/questions/45306220/equivalent-to-arduino-millis
+
+*Arduino Scheduler library:
+ https://forum.arduino.cc/index.php?topic=372119.0
+ https://create.arduino.cc/projecthub/GadgetsToGrow/don-t-delay-use-an-arduino-task-scheduler-today-215cfe
+ https://www.arduinolibraries.info/libraries/task-scheduler
+ https://playground.arduino.cc/Code/TaskScheduler/
+ https://wokwi.com/playground/task-scheduler  (I think that's the one)
+ https://www.instructables.com/id/Multi-task-Your-Arduino/ (might be useful)
+ https://blog.protoneer.co.nz/arduino-task-scheduler/
