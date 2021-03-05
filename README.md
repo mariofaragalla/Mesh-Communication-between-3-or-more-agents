@@ -33,11 +33,11 @@ _Note that: the id is included inside the message packet which is not normal cas
 
 All agents are using one pipeline/address (can handle up to six other modules) for both sending and recieving. That's why the transmission scheme is used to ensure that there is no data collision. 
 <br> The agents are classified into a leader and other agents(or nodes). This concept can be used in communication in multi-agent systems such as swarm robots. 
-For now the leader and the nodes are statically allocated (we must specify from the beginning which agent is the leader and which ones are the agents).
+Currently the leader and the nodes are statically allocated (we must specify from the beginning which agent is the leader and which ones are the agents).
 
 ### Server:
 
-For now the server has only one task which is data logging, so basically its only duty is to monitor all the messages being sent or recieved to/from other agents 
+For now the server has only one task which is [data logging](https://user-images.githubusercontent.com/55330224/110165399-8d8ca480-7dfb-11eb-9a1a-05a92ba9c824.mp4), so basically its only duty is to monitor all the messages being sent or recieved to/from other agents 
 by listening to the same address/pipeline that all other agents use for communication. 
 Data logging is impotant for online data visualization and in order to keep track of messages to detect if any data is lost during the whole transmission process. 
 
@@ -57,7 +57,7 @@ The final code can be tested using these [files](Final%20trials/Final%20code%20m
 
 First connect all arduinos to the computer, then open the files and adjust the com ports for each arduino. After that, in order to run the whole program,  [Node2.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node2) , [Node3.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node3) & [Server.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Server) should run first so that nodes 2 & 3 and the Server prepare themselves for listening before the leader broadcast any message. After that run the [Leadernode.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Leadernode) file to start the whole data transmission scheme disscussed above. In order to, monitor the messages being sent or recieved during transmission, the Serial plotter in the Server.ino file is used.
 
-https://user-images.githubusercontent.com/55330224/110161169-abefa180-7df5-11eb-8672-aaebe4a6d775.mp4
+Check this [video](https://user-images.githubusercontent.com/55330224/110161169-abefa180-7df5-11eb-8672-aaebe4a6d775.mp4).
 
 
 
