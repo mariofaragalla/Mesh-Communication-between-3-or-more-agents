@@ -57,5 +57,7 @@ The final code can be tested using these [files](Final%20trials/Final%20code%20m
 
 First connect all arduinos to the computer, then open the files and adjust the com ports for each arduino. After that, in order to run the whole program,  [Node2.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node2) , [Node3.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node3) & [Server.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Server) should run first so that nodes 2 & 3 and the Server prepare themselves for listening before the leader broadcast any message. After that run the [Leadernode.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Leadernode) file to start the whole data transmission scheme disscussed above. In order to, monitor the messages being sent or recieved during transmission, the Serial plotter in the Server.ino file is used.
 
+https://user-images.githubusercontent.com/55330224/110161169-abefa180-7df5-11eb-8672-aaebe4a6d775.mp4
+
 
 
