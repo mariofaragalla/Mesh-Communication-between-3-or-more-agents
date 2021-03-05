@@ -130,16 +130,13 @@ void sendPacket(uint8_t numOfMessages, uint8_t id){
       timerDelay(DEL);  // small delay (adjust to handle communication error)
       radio.stopListening();  // prepare the nrf24 module to send/write 
       radio.openWritingPipe(address[COMADR]);  // choose the common pipeline (COMADR) for sending
-          
       for(uint8_t send_count = 0; send_count< numOfMessages; send_count++){ // send the required no. of messages
-        
           sentData.pos = random(-500,500);  // send random position to simulate actual position change 
           sentData.count = send_count+1;  // update message tracking counter 
           sentData.id = id;  // update the message id 
           sentData.checkSum = checkSum(sentData.pos,sentData.count,sentData.id);  // calculate & update the sent checkSum 
           timerDelay(DELAY);  // delay for 150 ms
-          radio.write(&sentData, sizeof(sentData)); // send one message
-          
+          radio.write(&sentData, sizeof(sentData)); // send one message   
         }
         
 }
