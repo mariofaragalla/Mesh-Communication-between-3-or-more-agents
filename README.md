@@ -41,7 +41,7 @@ For now the server has only one task which is [data logging](https://user-images
 by listening to the same address/pipeline that all other agents use for communication. 
 Data logging is impotant for online data visualization and in order to keep track of messages to detect if any data is lost during the whole transmission process. 
 
-## Organization
+# Organization
 
 The Final code can be found here: [/Final trials/Final code many-transmissions/Documented code](/Final%20trials/Final%20code%20many-transmissions/Documented%20code) as follows:
 1. **Leadernode.ino**: which is the file containing the code for the leader node (node 1)
@@ -53,11 +53,19 @@ N.B: The library used for this project is the [RF24.h](https://maniacbug.github.
 
 The final code can be tested using these [files](Final%20trials/Final%20code%20many-transmissions%20(code%20for%20testing)). Also you can find some results for the testing code [here](Final%20trials/Results%20many-transmission%20(final).xlsx). Other files in the [Final trials](Final%20trials) folder include previous trials (before reaching the final result) , results of these prevouis trials and testing other components.
 
-## Sequence of Operation
+# Sequence of Operation
 
 First connect all arduinos to the computer, then open the files and adjust the com ports for each arduino. After that, in order to run the whole program,  [Node2.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node2) , [Node3.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Node3) & [Server.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Server) should run first so that nodes 2 & 3 and the Server prepare themselves for listening before the leader broadcast any message. After that run the [Leadernode.ino](Final%20trials/Final%20code%20many-transmissions/Documented%20code/Leadernode) file to start the whole data transmission scheme disscussed above. In order to, monitor the messages being sent or recieved during transmission, the Serial plotter in the Server.ino file is used.
 
 Check this [video](https://user-images.githubusercontent.com/55330224/110161169-abefa180-7df5-11eb-8672-aaebe4a6d775.mp4).
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Current Bugs
 
+1. Sometimes there is a slight delay which results in the loss of some messages per packet (For worst case: 3 messages are lost).
+2. Library [version](Final%20trials/Final%20code%20many-transmissions%20with%20library) is not stable (needs to be fixed).
+
+# Credits
+
+I would like to thank [Patrick Göttsch](https://www.tuhh.de/ics/institute/people/personal-pages/patrick-goettsch.html) for his help and guidance throughout the project.
