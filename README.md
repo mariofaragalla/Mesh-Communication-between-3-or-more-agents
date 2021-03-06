@@ -2,7 +2,7 @@
 This Project involves the communication between four nrf24 modules, where three are installed on three Arduinos of type Mega (**agents**) while one is 
 connected to Arduino Uno (**server**).
 
-## Connection
+# Connection
 The Hardware connection in this project is established according to this table:
 
 |   Nrf24 pin   | Arduino Mega  |  Arduino Uno  |
@@ -15,8 +15,8 @@ The Hardware connection in this project is established according to this table:
 |     MOSI      |     51        |     11        |
 |     MISO      |     50        |     12        |
 
-## About the Communication
-### Agents:
+# About the Communication
+## Agents:
 The agents send and recieve data to each other according to the following **data transmission scheme**: <br>  <br> 
 
 <img width="758" alt="Data Transmission scheme between 3 agents" src="https://user-images.githubusercontent.com/55330224/109875453-1cbd7f00-7c79-11eb-909d-91df4b8362bb.PNG">
@@ -35,7 +35,7 @@ All agents are using one pipeline/address (can handle up to six other modules) f
 <br> The agents are classified into a leader and other agents(or nodes). This concept can be used in communication in multi-agent systems such as swarm robots. 
 Currently the leader and the nodes are statically allocated (we must specify from the beginning which agent is the leader and which ones are the agents).
 
-### Server:
+## Server:
 
 For now the server has only one task which is [data logging](https://user-images.githubusercontent.com/55330224/110165399-8d8ca480-7dfb-11eb-9a1a-05a92ba9c824.mp4), so basically its only duty is to monitor all the messages being sent or recieved to/from other agents 
 by listening to the same address/pipeline that all other agents use for communication. 
