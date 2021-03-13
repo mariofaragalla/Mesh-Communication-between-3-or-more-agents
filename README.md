@@ -21,7 +21,7 @@ The agents send and recieve data to each other according to the following **data
 
 <img width="758" alt="Data Transmission scheme between 3 agents" src="https://user-images.githubusercontent.com/55330224/109875453-1cbd7f00-7c79-11eb-909d-91df4b8362bb.PNG">
 
-_Check [the data transmission scheme file](Final%20trials/Transmission%20scheme%20schedule.docx) for more details_. <br> <br>
+_Check [the data transmission scheme file](https://github.com/mariofaragalla/Mesh-Communication-between-3-or-more-agents/raw/master/Final%20trials/Transmission%20scheme%20schedule.docx) [here](Final%20trials/Transmission%20scheme%20schedule.docx) for more details_. <br> <br>
 The type of communication used here is similar to mesh flooding (here is a [link](https://hackaday.io/project/20388-home-smart-mesh/log/59566-nrf24l01-flood-mesh-protocol) 
 for some insight). Each agent sends a packet of 5 messages where each message contains the following: 
 1. The **data** being sent.
