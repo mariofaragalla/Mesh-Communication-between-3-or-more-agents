@@ -66,6 +66,12 @@ Check this [video](https://user-images.githubusercontent.com/55330224/110161169-
 1. Sometimes there is a slight delay which results in the loss of some messages per packet (For worst case: 3 messages are lost).
 2. Library [version](Final%20trials/Final%20code%20many-transmissions%20with%20library) is not stable (needs to be fixed).
 
+## Related forums
+
+- https://forum.arduino.cc/index.php?topic=712108.0
+- https://groups.google.com/g/radiohead-arduino/c/2R0c1J5AIYc
+- https://groups.google.com/g/radiohead-arduino/c/RhQmNdaQrfw
+
 ## Credits
 
 I would like to thank [Patrick Göttsch](https://www.tuhh.de/ics/institute/people/personal-pages/patrick-goettsch.html) for his help and guidance throughout the project.
